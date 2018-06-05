@@ -148,21 +148,21 @@
 		            <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
 		        </configuration>
 		    </plugin>  
+		    <!--  
 		    <plugin>
 	            <groupId>com.github.github</groupId>
 	            <artifactId>site-maven-plugin</artifactId>
 	            <version>0.11</version>
 	            <configuration>
-	                <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-	                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-	                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-	                <branch>artifact/tree/mvn-repo</branch>                       <!-- remote branch name -->
+	                <message>Maven artifacts for ${project.version}</message>  
+	                <noJekyll>true</noJekyll>                                  
+	                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 
+	                <branch>artifact/tree/mvn-repo</branch>                       
 	                <includes><include>**/*</include></includes>
-	                <repositoryName>NGADC Maven Repository</repositoryName>      <!-- github repo name -->
-	                <repositoryOwner>cindychaopeng</repositoryOwner>    <!-- github username  -->
+	                <repositoryName>NGADC Maven Repository</repositoryName>      
+	                <repositoryOwner>cindychaopeng</repositoryOwner>    
 	            </configuration>
-	            <executions>
-	              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+	            <executions>	              
 	              <execution>
 	                <goals>
 	                  <goal>site</goal>
@@ -170,7 +170,8 @@
 	                <phase>deploy</phase>
 	              </execution>
 	            </executions>
-	        </plugin>		          
+	        </plugin>
+	        -->		          
         </plugins>
     </build>
 
