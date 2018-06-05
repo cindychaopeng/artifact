@@ -62,7 +62,15 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>
+	    <repository>
+	        <id>ngadc-mvn-repo</id>
+	        <url>https://github.com/cindychaopeng/artifact/</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	            <updatePolicy>always</updatePolicy>
+	        </snapshots>
+	    </repository>
+	</repositories>
 
 	<distributionManagement>
 	    <repository>
@@ -148,18 +156,19 @@
 		            <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
 		        </configuration>
 		    </plugin>  
-		    <!--  
+
 		    <plugin>
 	            <groupId>com.github.github</groupId>
 	            <artifactId>site-maven-plugin</artifactId>
-	            <version>0.11</version>
+	            <version>0.12</version>
 	            <configuration>
+	            	<server>github</server>	            
 	                <message>Maven artifacts for ${project.version}</message>  
 	                <noJekyll>true</noJekyll>                                  
 	                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 
-	                <branch>artifact/tree/mvn-repo</branch>                       
+	                <branch>refs/heads/mvn-repo</branch>                       
 	                <includes><include>**/*</include></includes>
-	                <repositoryName>NGADC Maven Repository</repositoryName>      
+	                <repositoryName>artifact</repositoryName>      
 	                <repositoryOwner>cindychaopeng</repositoryOwner>    
 	            </configuration>
 	            <executions>	              
@@ -171,7 +180,7 @@
 	              </execution>
 	            </executions>
 	        </plugin>
-	        -->		          
+	          
         </plugins>
     </build>
 
