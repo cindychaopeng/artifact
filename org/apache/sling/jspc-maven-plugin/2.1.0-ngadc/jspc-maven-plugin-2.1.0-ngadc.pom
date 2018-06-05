@@ -64,7 +64,7 @@
         </repository>
 	    <repository>
 	        <id>ngadc-mvn-repo</id>
-	        <url>https://github.com/cindychaopeng/artifact/</url>
+	        <url>https://raw.github.com/cindychaopeng/artifact/mvn-repo/</url>
 	        <snapshots>
 	            <enabled>true</enabled>
 	            <updatePolicy>always</updatePolicy>
